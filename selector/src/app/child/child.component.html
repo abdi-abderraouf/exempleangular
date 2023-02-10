@@ -1,0 +1,9 @@
+<div> welcome {{myname}}
+  <h2> i am the child </h2>
+  <input placeholder="search" name="recherche" [(ngModel)]="search">
+  <ul>
+    <li *ngFor="let n of names">
+      <div *ngIf="n.includes(search)"><a href="#" (click)="changedata(n)">{{n}}</a></div>
+    </li>
+  </ul>
+</div>
